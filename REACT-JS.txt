@@ -1,0 +1,60 @@
+we required node.js for npm which is node package manager used to install packages/frameworks, also for npx which is node
+package executer it is used to execute the package instead of installing it saves our space, another is yarn similar to npm
+
+• reactJs is library/frameworks of node.js generally used for creating single page applications, for creating a react applications
+  the basic command which we use is npx create-react-app appname, one limitation is appname should contain only lowercase
+  characters, also it is not necessary to use react in this way we can also directly implement it but it is better to use
+  the feature as it saves our lot of time
+  npx create-react-app appname ; method initializes working directories and import all the necessary files/ packages.
+
+• while creating a react app, we will alter only public and src folder, there is no need to change or alter other files
+  difference b/w props and state;  Props are used to pass data from one component to another. The state is a local data 
+  storage that is local to the component only and cannot be passed to other components.
+
+• We create react app using multiple components, basically splitting a webpage into multiple parts/components which can be
+  used for other projects also.
+  in react we use jsx instead of ordinary js, jsx is extended version of HTML in which we can implement JavaScript directly
+  by some minor syntax changes -:
+  jsx is basically html in which we can write JavaScript inside {} curly barackets
+  - HTML class is replaced by className in jsx as class keyword is reserved for JS classes
+  - similarly HTML for parameter is replaced by htmlFor as for is reserved for loop in JS
+  - also HTML index for tags is replaced by tagIndex here.
+  - in jsx every tag is needed to be closed, even singleton tags also they are closed as <tagname/>
+  - for including inline css we have to style a object and to that object also have to pass a object, in simple language
+    style{{css}}, also properties are paased as object only and name also vary refer react documentation site for updated property 
+    names also see basics file for example.
+  - jsx code while returning through a components need to be wrapped in a single container, it can not have multiple primary containers
+    , for preventing error we can wrapp our code in <>jsx code</> 
+  by making these changes we can include bootstrap in our projects also.
+  there are also many safety features in JavaScript, which helps to prevent common errors, one such is while declaring a 
+  normal js variable if we include html tags in it, and then include this variable in our jsx, then those tags will have
+  no effect, we can change this setting as per requirement
+
+• we run the react file using npm run start / npm start in same directory of reactapp, it will create a local host for our
+  app for us to run it in our environment, by default it opens the app in the default browser of the system which we can 
+  change(refer internet for it), another noting point every time running npm start inc. the disk space as it recreates 
+  dependencies
+  if we accidently deletes the node_modules folder from our project we can reinstall in using command npm install
+  for creating a production build we run command npm run build
+
+# COMPONENTS
+  components are the subparts of a project which we create seprately and merges in the main document, it inc. reusability
+  in react there are two types of components class based and function based, function based components are latest and much
+  easy to use and implement then class based components, as easy syntax and understanding, in function based components
+  we just return jsx code in a function
+
+# EXPORTS (JavaScript feature)
+   there are 2 types of exports in react one is normal export other is default export, refer basic.js and index.js for 
+   example and better understanding, basic simple diff is in normal export we export elements as object elements and
+   while importing name should exactly match as declared name in file, in default export any name can be used for importing
+
+# PROPS & PROPTYPES
+  have to import both from libraries before using
+  props stands for properties which we include in our function component like a parameter, props are basics of including
+  user defined parameters in a component (refer firstapp navbar), we can create parameters using props in our jsx and call
+  these parameters while rendering component
+  default props refers to default values of these prop parameters, if user forgot to enter parameters then these will rendering
+  isRequired keyword makes it necessary for user to paas that prop parameter while rendering, if user fails do so and also
+  no default prop is defined error will be raised visible in console
+  proptypes is used to define types of our props, if type of entered prop parameter and defined proptype donot matches
+  then error will be raised visible in console

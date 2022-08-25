@@ -42,6 +42,7 @@ package executer it is used to execute the package instead of installing it save
   in react there are two types of components class based and function based, function based components are latest and much
   easy to use and implement then class based components, as easy syntax and understanding, in function based components
   we just return jsx code in a function
+  component name should start with uppercase in react
 
 # EXPORTS (JavaScript feature)
    there are 2 types of exports in react one is normal export other is default export, refer basic.js and index.js for 
@@ -58,3 +59,11 @@ package executer it is used to execute the package instead of installing it save
   no default prop is defined error will be raised visible in console
   proptypes is used to define types of our props, if type of entered prop parameter and defined proptype donot matches
   then error will be raised visible in console
+
+# HOOKS & STATES
+  Hooks are a new addition in React 16.8. They let you use state and other React features without writing a class.
+  useState is the first “Hook”, Hooks helps us to use class features without creating a class
+  Hooks are functions that let you “hook into” React state and lifecycle features from function components. Hooks don’t 
+  work inside classes — they let you use React without classes
+  refer textform.js for example as we created a small app for converting entered text to uppercase without reloading page
+  refer react documentation for better understanding of features

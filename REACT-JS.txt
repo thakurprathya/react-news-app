@@ -15,7 +15,7 @@ package executer it is used to execute the package instead of installing it save
   used for other projects also.
   in react we use jsx instead of ordinary js, jsx is extended version of HTML in which we can implement JavaScript directly
   by some minor syntax changes -:
-  jsx is basically html in which we can write JavaScript inside {} curly barackets
+  jsx is basically html in which we can write Ja vaScript inside {} curly barackets
   - HTML class is replaced by className in jsx as class keyword is reserved for JS classes
   - similarly HTML for parameter is replaced by htmlFor as for is reserved for loop in JS
   - also HTML index for tags is replaced by tagIndex here.
@@ -34,6 +34,7 @@ package executer it is used to execute the package instead of installing it save
   app for us to run it in our environment, by default it opens the app in the default browser of the system which we can 
   change(refer internet for it), another noting point every time running npm start inc. the disk space as it recreates 
   dependencies
+  npm run start/ npm start ; runs a development server
   if we accidently deletes the node_modules folder from our project we can reinstall in using command npm install
   for creating a production build we run command npm run build
 
@@ -67,3 +68,34 @@ package executer it is used to execute the package instead of installing it save
   work inside classes — they let you use React without classes
   refer textform.js for example as we created a small app for converting entered text to uppercase without reloading page
   refer react documentation for better understanding of features
+
+we can use setInterval of JavaScript to create annoying and repetedily poping advertisments, title changing etc.
+
+# REACT ROUTER
+  react router is used to fetch components from server, as it is better to change only the required component than updating
+  the whole site, this will improve user experience, like in Youtube if we go from Music section to Games section only
+  the centre content is changing rest side bar nav bar search bar is not changing
+  page donot reload on just updating the component using react router
+  
+  refer site for how to use and documentation  https://v5.reactrouter.com/web/guides/quick-start  this is old documentation
+  https://reactrouter.com/en/v6.3.0/upgrading/v5  for any error refer internet and this link is update docs
+  It is a seprate package needed to be installed using npm install react-router-dom, we have to run npm start again
+  then have to import all imp elements import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";  //importing react router files
+  
+  we can replace anchor tag <a> with <Link> which is router element, it will help us to move to page without reloading
+  and instead of "href" here we have to use "to"
+
+  exact- keyword is used for exact matching in Route path else by default matching is partial, in partial matching
+  /users & /users/home will get match but will not match if using exact, so it is a good practice to use it
+
+# DEVELOPMENT SERVER, BUILD SERVER, DEPLOYMENT OF SITE ON SERVER
+https://create-react-app.dev/docs/deployment/   refer site for deployment related queries
+  when we use npm start it creates a development server on which we make our changes, and updates our packages
+  npm run build creates a fully developed project (build folder), it creates a static application in which we can't make
+  changes we can run this build site (index.html) now directly, or use live server
+  build folder is the folder which we host on servers, as it is compressed and use less internet for a user to fetch
+  then hosting development server also, if large no. of users visit build site it will cost less to the owner as
+  less data is send from server less rates and all.
+  While Hosting on github pages (free hosting), we should avoid hosting sites created using react-router-dom refer github pages
+  link of main link provided above  https://create-react-app.dev/docs/deployment/#github-pages  solution to this problem
+  is also mentioned here

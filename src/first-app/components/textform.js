@@ -64,7 +64,9 @@ export default function Textform(props){  //direct exporting (default export)
         </div>
         <div className="container mt-4">
             <h2 className={`mb-2 mt-3 text-${props.mode==="light"?"black":"white"}`}><b>Text Summary</b></h2>
-            <p className={`text-${props.mode==="light"?"black":"white"}`}> {text.split(" ").length} Words {"&"} {text.length} Characters</p> {/*split funct returns array by spliting paased var with entered string*/}
+            <p className={`text-${props.mode==="light"?"black":"white"}`}>
+                {text.length===0?0:(text.charAt(text.length-1)===" "?text.split(" ").length-1:text.split(" ").length)} Words {"& "} 
+                {text.charAt(text.length-1)===" "?text.length-1:text.length} Characters</p> {/*split funct returns array by spliting paased var with entered string*/}
             <h2 className={`mb-2 mt-3 text-${props.mode==="light"?"black":"white"}`}><b>Preview</b></h2>
             <p className={`text-${props.mode==="light"?"black":"white"}`}> {text.length>0?text:"Enter some text to preview"}</p>
         </div>

@@ -99,3 +99,13 @@ https://create-react-app.dev/docs/deployment/   refer site for deployment relate
   While Hosting on github pages (free hosting), we should avoid hosting sites created using react-router-dom refer github pages
   link of main link provided above  https://create-react-app.dev/docs/deployment/#github-pages  solution to this problem
   is also mentioned here
+  some changes which we need to do for production site refer https://youtu.be/kEvfVw5Sq5c?list=PLu0W_9lII9agx66oZnT6IyhcMIbUMNMdt&t=1035
+  from current time how to solve the problem
+
+•filter function, used in firstapp textform
+(method) Array<string>.filter(predicate: (value: string, index: number, array: string[]) => unknown, thisArg?: any): string[] (+1 overload)
+Returns the elements of an array that meet the condition specified in a callback function.
+— A function that accepts up to three arguments. The filter method calls the predicate function one time for each element in the array.
+
+• A website should have as low content shifting as possible refer firstapp alert for example
+• onclick function requires function, not function call, so use arrow function in such cases

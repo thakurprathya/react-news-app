@@ -6,21 +6,33 @@ import TxtForm from './components/textform';  //default exporting textform
 import AboutForm from './components/formdarkmode';  //about form default export
 import Alert from './components/alert';
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";  //importing react router files
+import {removebodyClasses} from "./components/colormode";
 
 function FirstApp(){
   const [mode, setmode]= useState("light"); //creating a new state which will help in setting whole page in darkmode
-  const togglemode= ()=>{  //creating function
+  const togglemode= ()=>{  //creating function for light and dark mode
+      removebodyClasses();
       if(mode === "light"){
         setmode("dark");
         document.body.style.backgroundColor= "rgb(28, 38, 77)";
         showAlert("DarkMode Enabled","Success!!!","success");
         document.title = "ReactLearning App-DarkMode"; //updating title of page
+        let n=document.getElementsByClassName("txtform-btn").length;
+            for(let i=0; i<n; i++){
+                document.getElementsByClassName("txtform-btn")[i].classList.remove("btn-warning");
+                document.getElementsByClassName("txtform-btn")[i].classList.add("btn-primary");
+            }
       }
       else{
         setmode("light");
         document.body.style.backgroundColor= "rgb(217, 218, 219)";
         showAlert("LightMode Enabled","Success!!!","success");
         document.title = "ReactLearning App-LightMode";
+        let n=document.getElementsByClassName("txtform-btn").length;
+            for(let i=0; i<n; i++){
+                document.getElementsByClassName("txtform-btn")[i].classList.remove("btn-warning");
+                document.getElementsByClassName("txtform-btn")[i].classList.add("btn-primary");
+            }
       }
   }
 
@@ -42,7 +54,7 @@ function FirstApp(){
             <TxtForm brief="Enter the text to Convert to UpperCase" heading="This is my Heading" mode={mode} alert={showAlert}/>
             </div>
           }/> {/*for / path, main path rendering aboutform component, set path in index.html, exact keyword is used for exact matching, if not present will done partial matching */}
-          <Route exact path="/aboutform" element={<AboutForm/>}/>  {/*for /aboutform path, rendering aboutform component, set path in index.html */}
+          <Route exact path="/aboutform" element={<AboutForm mode={mode}/>}/>  {/*for /aboutform path, rendering aboutform component, set path in index.html */}
         </Routes>
       </Router>
     </>

@@ -1,7 +1,9 @@
 //also updating as per darkmode requirements firstapp.js requirements
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Colormode from './colormode';
 import { Link } from 'react-router-dom'; //will use link instead of anchor tag for connecting it with router dom, it will go to link without reloading
+
 
 export default function Navbar(props){
   return (
@@ -14,6 +16,7 @@ export default function Navbar(props){
                 <Link className={`nav-item nav-link mx-2 text-${props.mode==="dark"?"light":"dark"}`} to="/">TextForm</Link>
                 <Link className={`nav-item nav-link mx-2 text-${props.mode==="dark"?"light":"dark"}`} to="/aboutform">AboutForm</Link>
             </div>
+            <Colormode/>
             <div className="form-check form-switch mx-5">
               <input className="form-check-input" type="checkbox" role="switch" id="modeswitch" onClick={props.togglemode}/>
               <label className={`form-check-label text-${props.mode==="dark"?"light":"dark"}`} htmlFor="modeswitch">

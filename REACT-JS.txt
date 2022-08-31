@@ -71,6 +71,10 @@ package executer it is used to execute the package instead of installing it save
 
 we can use setInterval of JavaScript to create annoying and repetedily poping advertisments, title changing etc.
 
+$$ THE MAIN DIFFERENCE BETWEEN STATE AND PROP IS, WE USE PROP WHEN WE NOW FOR A PARTICULAR COMPONENT THAT ELEMENT WILL REMAIN
+   SAME AND STATE IS USED WHEN THAT ELEMENT STATE NEEDS TO BE CHANGE CONTINUOSLY
+   we can change state using props, but props are read only so not possible to change it
+
 # REACT ROUTER
   react router is used to fetch components from server, as it is better to change only the required component than updating
   the whole site, this will improve user experience, like in Youtube if we go from Music section to Games section only
@@ -109,3 +113,13 @@ Returns the elements of an array that meet the condition specified in a callback
 
 • A website should have as low content shifting as possible refer firstapp alert for example
 • onclick function requires function, not function call, so use arrow function in such cases
+
+#CLASS BASED COMPONENTS
+in class based components this keyword is used for referencing to class elements
+• this.props is used to create props object, this.state is used for creating state object
+• props in classes are used using destructuring of javascript we declare props as {var1, var2, --}= this.props , pulling
+  data from props object
+• evertime creating a constructor call super class/function to prevent error, empty constructor raises errors
+• this.setState is used for setting a state as we cannot directly set a state
+• proptypes and default props here are defined using static keyword
+33

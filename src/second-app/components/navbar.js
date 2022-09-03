@@ -19,7 +19,6 @@ export default class Navbar extends Component {
                     <li className='nav-item'><Link className={`nav-link text-light px-0 py-0 my-0 mx-0`} to="/">Home</Link></li>
                     <li className='nav-item'><Link className={`nav-link text-light px-0 py-0 my-0 mx-0`} to="/business">Business</Link></li>
                     <li className='nav-item'><Link className={`nav-link text-light px-0 py-0 my-0 mx-0`} to="/entertainment">Entertainment</Link></li>
-                    <li className='nav-item'><Link className={`nav-link text-light px-0 py-0 my-0 mx-0`} to="/general">General</Link></li>
                     <li className='nav-item'><Link className={`nav-link text-light px-0 py-0 my-0 mx-0`} to="/health">Health</Link></li>
                     <li className='nav-item'><Link className={`nav-link text-light px-0 py-0 my-0 mx-0`} to="/science">Science</Link></li>
                     <li className='nav-item'><Link className={`nav-link text-light px-0 py-0 my-0 mx-0`} to="/sports">Sports</Link></li>
@@ -27,7 +26,6 @@ export default class Navbar extends Component {
                     {/* <li className='nav-item'><a className={`nav-link text-light px-0 py-0 my-0 mx-0`} href="/">Home</a></li>
                     <li className='nav-item'><a className={`nav-link text-light px-0 py-0 my-0 mx-0`} href="/business">Business</a></li>
                     <li className='nav-item'><a className={`nav-link text-light px-0 py-0 my-0 mx-0`} href="/entertainment">Entertainment</a></li>
-                    <li className='nav-item'><a className={`nav-link text-light px-0 py-0 my-0 mx-0`} href="/general">General</a></li>
                     <li className='nav-item'><a className={`nav-link text-light px-0 py-0 my-0 mx-0`} href="/health">Health</a></li>
                     <li className='nav-item'><a className={`nav-link text-light px-0 py-0 my-0 mx-0`} href="/science">Science</a></li>
                     <li className='nav-item'><a className={`nav-link text-light px-0 py-0 my-0 mx-0`} href="/sports">Sports</a></li>

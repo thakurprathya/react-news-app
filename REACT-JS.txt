@@ -122,4 +122,11 @@ in class based components this keyword is used for referencing to class elements
 • evertime creating a constructor call super class/function to prevent error, empty constructor raises errors
 • this.setState is used for setting a state as we cannot directly set a state
 • proptypes and default props here are defined using static keyword
-33
+
+#INFINITE SCROLL PACKAGE
+in modern website use of previous and next buttons for fetching new data as used in second-app (check commented part),
+is stopped, in new sites we use infinite scroll bar to fetch new data as used in youtube
+for using this we have to install a package which can be installed from the command 
+• npm install --save react-infinite-scroll-component
+• refer sites for more methods and documentation ; https://www.npmjs.com/package/react-infinite-scroll-component
+36

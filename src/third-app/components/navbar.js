@@ -1,8 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'; //will use link instead of anchor tag for connecting it with router dom, it will go to link without reloading
 
-export default class Navbar extends Component {
-  render() {
+const Navbar =()=>{
     return (
       <div>
         {/* including bootstrap navbar and making changes to it for acceptance in jsx, also replacing anchor tag with
@@ -36,5 +35,6 @@ export default class Navbar extends Component {
         </nav>
       </div>
     )
-  }
 }
+
+export default Navbar;

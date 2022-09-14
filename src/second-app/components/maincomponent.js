@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Item from './item';
 import Loader from './loader';
 import InfiniteScroll from "react-infinite-scroll-component"; //including infinite scroll files
 
 export default class MainComp extends Component { 
   static defaultProps={Country: "us", pageSize: 16, Category: "general"};
-  // static propTypes={Country: PropTypes.string, pageSize: PropTypes.number, Category: PropTypes.string}
+  static propTypes={Country: PropTypes.string, pageSize: PropTypes.number, Category: PropTypes.string}
   
   constructor(props){  //will be called everytime class object created, called, will run first
       super(props);  //for using props in constructor have to pass it as parameter in both constructor and super
@@ -22,16 +23,20 @@ export default class MainComp extends Component {
   CapitalizeStr= (string)=>{ return (string.charAt(0).toUpperCase() + string.slice(1)); }
   async componentDidMount(){  //this will run after render component, also using async await of Js
     //   console.log("cdm");
-      let url=`https://newsapi.org/v2/top-headlines?country=${this.props.Country}&category=${this.props.Category}&apiKey=0403917ebc3f4eaaadef9d8878a6b710&pagesize=${this.props.pageSize}`;  //url using for fetchapi, pagesize is newsapi parameter will fetch only entered data to prop at one page,setting it using props
+      let url=`https://newsapi.org/v2/top-headlines?country=${this.props.Country}&category=${this.props.Category}&apiKey=${this.props.apiKey}&pagesize=${this.props.pageSize}`;  //url using for fetchapi, pagesize is newsapi parameter will fetch only entered data to prop at one page,setting it using props
+      this.props.setProgress(10);  //initialzing progress bar on loading and changing category
       this.setState({loading: true});  //enabling loader
       let data= await fetch(url); //cdm will wait for this promise to resolve
+      this.props.setProgress(30);  //setting width after fetch
       let parsed_data= await data.json();
+      this.props.setProgress(70);  //setting width after parsing data
       this.setState({articles: parsed_data.articles, totalResults: parsed_data.totalResults, loading: false});  //setting state depending upon api
+      this.props.setProgress(100);  //finalizing progress bar
   }
   // no longer required below functions as they handle clicking of buttons
   // HandlePrevClick= async ()=>{  //creating function
   //   //   console.log("prev");
-  //   let url=`https://newsapi.org/v2/top-headlines?country=${this.props.Country}&category=${this.props.Category}&apiKey=0403917ebc3f4eaaadef9d8878a6b710&page=${this.state.page -1}&pagesize=${this.props.pageSize}`;  //url using for fetchapi
+  //   let url=`https://newsapi.org/v2/top-headlines?country=${this.props.Country}&category=${this.props.Category}&apiKey=${this.props.apiKey}&page=${this.state.page -1}&pagesize=${this.props.pageSize}`;  //url using for fetchapi
   //   this.setState({loading: true});  //enabling loader
   //   let data= await fetch(url); //cdm will wait for this promise to resolve
   //   let parsed_data= await data.json();
@@ -39,7 +44,7 @@ export default class MainComp extends Component {
   // }
   // HandleNextClick= async ()=>{  //creating function
   //   //   console.log("next");
-  //   let url=`https://newsapi.org/v2/top-headlines?country=${this.props.Country}&category=${this.props.Category}&apiKey=0403917ebc3f4eaaadef9d8878a6b710&page=${this.state.page +1}&pagesize=${this.props.pageSize}`;  //url using for fetchapi
+  //   let url=`https://newsapi.org/v2/top-headlines?country=${this.props.Country}&category=${this.props.Category}&apiKey=${this.props.apiKey}&page=${this.state.page +1}&pagesize=${this.props.pageSize}`;  //url using for fetchapi
   //       this.setState({loading: true});  //enabling loader
   //       let data= await fetch(url); //cdm will wait for this promise to resolve
   //       let parsed_data= await data.json();
@@ -48,7 +53,7 @@ export default class MainComp extends Component {
   fetchMoreData= async ()=>{
     this.setState({page: this.state.page +1});
     // an noteworthy point here is we're incrementing page both as state as well as in link if any of them not done error will be raised
-    let url=`https://newsapi.org/v2/top-headlines?country=${this.props.Country}&category=${this.props.Category}&apiKey=0403917ebc3f4eaaadef9d8878a6b710&page=${this.state.page +1}&pagesize=${this.props.pageSize}`;
+    let url=`https://newsapi.org/v2/top-headlines?country=${this.props.Country}&category=${this.props.Category}&apiKey=${this.props.apiKey}&page=${this.state.page +1}&pagesize=${this.props.pageSize}`;
     let data= await fetch(url); //cdm will wait for this promise to resolve
     let parsed_data= await data.json();
     this.setState({ articles: this.state.articles.concat(parsed_data.articles), totalResults: parsed_data.totalResults });  //setting state depending upon api, also here concatenating new data to articles
@@ -58,7 +63,7 @@ export default class MainComp extends Component {
     // console.log(`render`);
     return (
       <>
-        <h1 className='mb-4 mt-4 text-center'><b>Top {this.CapitalizeStr(this.props.Category)} Headlines</b></h1>
+        <h1 className='text-center' style={{marginTop:"110px", marginBottom:"10px"}}><b>Top {this.CapitalizeStr(this.props.Category)} Headlines</b></h1>
         {this.state.loading && <Loader/>} {/*if loading true then display loader, used here for first time loding on reloding the page, earlier using it for all the loadings*/}
         
         <InfiniteScroll dataLength={this.state.articles.length} next={this.fetchMoreData} 

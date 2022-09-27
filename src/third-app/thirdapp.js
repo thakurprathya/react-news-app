@@ -9,8 +9,7 @@ import LoadingBar from 'react-top-loading-bar';  //importing top load bar packag
 
 const Thirdapp= ()=>{ // in class based components this keyword is used for referencing to class elements
   const pageSize = 12;  //defining variable in class for using in route
-  const apiKey="2a2331daa851488a9fe4eb6036585e22"; //directly setting apikey to use as prop
-  // const apiKey = process.env.REACT_App_SecondAppApiKey;//importing from .env file our environment variable as apikey used in main second app
+  const apiKey = process.env.REACT_App_SecondAppApiKey;//importing from .env file our environment variable as apikey used in main second app
   const [progress, setProgress] = useState(0);  //defining a state 
     return (
       <div>

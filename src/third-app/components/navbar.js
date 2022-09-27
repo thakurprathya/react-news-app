@@ -8,7 +8,7 @@ const Navbar =()=>{
         Link of react-router-dom ,and href with to for use router */}
         <nav className={`navbar fixed-top navbar-expand-lg bg-black`}>{/*including js that's why use backticks, black is more dark than dark that's why using it */}
             <div className="container-fluid" style={{display:"flex", justifyContent:"flex-start"}}>
-                <Link className={`navbar-brand text-light my-2`} to="/" style={{fontWeight:"bold", fontSize:"25px", marginRight:"100px", marginLeft:"15px"}}>News React App</Link>
+                <Link className={`navbar-brand text-light my-2`} to="/" style={{fontWeight:"bold", fontSize:"25px", marginRight:"95px", marginLeft:"10px"}}>News React App</Link>
                 {/* <a className={`navbar-brand text-light my-2`} href="/" style={{fontWeight:"bold", fontSize:"25px", marginRight:"100px", marginLeft:"15px"}}>News React App</a>*/}
                 <button className="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span className="navbar-toggler-icon bg-light"></span>

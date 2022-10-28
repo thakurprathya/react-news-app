@@ -15,20 +15,20 @@ const Navbar =()=>{
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul className='navbar-nav me-auto mb-2 mb-lg-0' style={{fontSize:"17px"}}>  {/*overwriting bootstrap class size by providing size*/}
-                    <li className='nav-item'><Link className={`nav-link text-light px-0 py-0 my-0 mx-0`} to="/">Home</Link></li>
-                    <li className='nav-item'><Link className={`nav-link text-light px-0 py-0 my-0 mx-0`} to="/business">Business</Link></li>
-                    <li className='nav-item'><Link className={`nav-link text-light px-0 py-0 my-0 mx-0`} to="/entertainment">Entertainment</Link></li>
-                    <li className='nav-item'><Link className={`nav-link text-light px-0 py-0 my-0 mx-0`} to="/health">Health</Link></li>
-                    <li className='nav-item'><Link className={`nav-link text-light px-0 py-0 my-0 mx-0`} to="/science">Science</Link></li>
-                    <li className='nav-item'><Link className={`nav-link text-light px-0 py-0 my-0 mx-0`} to="/sports">Sports</Link></li>
-                    <li className='nav-item'><Link className={`nav-link text-light px-0 py-0 my-0 mx-0`} to="/technology">Technology</Link></li>
-                    {/* <li className='nav-item'><a className={`nav-link text-light px-0 py-0 my-0 mx-0`} href="/">Home</a></li>
-                    <li className='nav-item'><a className={`nav-link text-light px-0 py-0 my-0 mx-0`} href="/business">Business</a></li>
-                    <li className='nav-item'><a className={`nav-link text-light px-0 py-0 my-0 mx-0`} href="/entertainment">Entertainment</a></li>
-                    <li className='nav-item'><a className={`nav-link text-light px-0 py-0 my-0 mx-0`} href="/health">Health</a></li>
-                    <li className='nav-item'><a className={`nav-link text-light px-0 py-0 my-0 mx-0`} href="/science">Science</a></li>
-                    <li className='nav-item'><a className={`nav-link text-light px-0 py-0 my-0 mx-0`} href="/sports">Sports</a></li>
-                    <li className='nav-item'><a className={`nav-link text-light px-0 py-0 my-0 mx-0`} href="/technology">Technology</a></li> */}
+                    <li className='nav-item'><Link className={`nav-link text-light mx-4 mb-1`} to="/"><b>Home</b></Link></li>
+                    <li className='nav-item'><Link className={`nav-link text-light mx-4 mb-1`} to="/business"><b>Business</b></Link></li>
+                    <li className='nav-item'><Link className={`nav-link text-light mx-4 mb-1`} to="/entertainment"><b>Entertainment</b></Link></li>
+                    <li className='nav-item'><Link className={`nav-link text-light mx-4 mb-1`} to="/health"><b>Health</b></Link></li>
+                    <li className='nav-item'><Link className={`nav-link text-light mx-4 mb-1`} to="/science"><b>Science</b></Link></li>
+                    <li className='nav-item'><Link className={`nav-link text-light mx-4 mb-1`} to="/sports"><b>Sports</b></Link></li>
+                    <li className='nav-item'><Link className={`nav-link text-light mx-4 mb-1`} to="/technology"><b>Technology</b></Link></li>
+                    {/* <li className='nav-item'><a className={`nav-link text-light mx-4 mb-2`} href="/"><b>Home</b></a></li>
+                    <li className='nav-item'><a className={`nav-link text-light mx-4 mb-2`} href="/business"><b>Business</b></a></li>
+                    <li className='nav-item'><a className={`nav-link text-light mx-4 mb-2`} href="/entertainment"><b>Entertainment</b></a></li>
+                    <li className='nav-item'><a className={`nav-link text-light mx-4 mb-2`} href="/health"><b>Health</b></a></li>
+                    <li className='nav-item'><a className={`nav-link text-light mx-4 mb-2`} href="/science"><b>Science</b></a></li>
+                    <li className='nav-item'><a className={`nav-link text-light mx-4 mb-2`} href="/sports"><b>Sports</b></a></li>
+                    <li className='nav-item'><a className={`nav-link text-light mx-4 mb-2`} href="/technology"><b>Technology</b></a></li> */}
                   </ul>
                 </div>
             </div>

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals'; 
 // import StartingReact from './basics/basics';  //including our basic file js file which we exported as default its alias name can be any of our choice
-import { varr } from './basics/basics';  //normal export example, its alias should be same as used in file else error will be raised
+// import { varr } from './basics/basics';  //normal export example, its alias should be same as used in file else error will be raised
 // import FirstApp from './first-app/firstapp';
 // import SecondApp from './second-app/secondapp';
 import ThirdApp from './third-app/thirdapp';
@@ -12,7 +12,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));  //searching 
 root.render(
   <React.StrictMode>
    {/* <StartingReact/> */} {/*including our first basic page component after importing, for running this site proper view donot include bootstrap in index.html*/}
-   { console.log(varr) }  {/*printing varr in console which we exported normally */}
+   {/* { console.log(varr) }  printing varr in console which we exported normally */}
    {/* <FirstApp/> */}
    {/* <SecondApp/> */}
    {<ThirdApp/>}

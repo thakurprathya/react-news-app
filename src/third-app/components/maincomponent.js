@@ -47,7 +47,7 @@ const MainComp =(props)=>{
 
     return (
       <>
-        <h1 className='text-center' style={{marginTop:"110px", marginBottom:"10px"}}><b>Top {CapitalizeStr(props.Category)} Headlines</b></h1>
+        <h1 className='text-center' style={{marginTop:"120px", marginBottom:"10px"}}><b>Top {CapitalizeStr(props.Category)} Headlines</b></h1>
         {loading && <Loader/>} {/*if loading true then display loader, used here for first time loding on reloding the page, earlier using it for all the loadings*/}
         
         <InfiniteScroll dataLength={articles.length} next={fetchMoreData} hasMore={articles.length !== totalResults} loader={<Loader/>}>
